@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowUpRight, Github } from 'lucide-react';
-import snaprecImg from '../assets/snaprec.png';
+import snaprecImg from '../assets/SnapRec.png';
 import roostImg from '../assets/roost.png';
 import spaceshipTitanicImg from '../assets/spaceship_titanic.png';
 
