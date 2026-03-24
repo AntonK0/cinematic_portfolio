@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-dark font-sans;
+    overflow-x: hidden;
+  }
+}
+
+/* Global CSS noise overlay */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.05;
+}
+
+/* Micro-Interactions */
+.magnetic-btn {
+  display: inline-flex;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.magnetic-btn:hover {
+  transform: scale(1.03);
+}
+
+.hover-lift {
+  transition: transform 0.2s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-1px);
+}
+
+/* Preset E Portrait Treatment */
+.portrait-treated {
+  filter: saturate(0.8);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: 0 25px 50px -12px rgba(27, 42, 56, 0.15), 0 0 100px 20px rgba(117, 170, 219, 0.1);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+  min-width: max-content;
+}
